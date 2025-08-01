@@ -1,13 +1,18 @@
 print("Notas del Estudiante")
 
+try:
+    cantidad = int(input("Ingresela cantidad de Estudiantes que desea ingresar: "))
 
-cantidad = int(input("Ingresela cantidad de Estudiantes que desea ingresar: "))
+    for i in range(cantidad):
+        nombre = input(f"Ingrese el nombre del estudiante {i+1}:  ")
+        notas = int(input("Ingrese la cantidad de notas a promediar: "))
+        sum = 0
+        for j in range(notas):
+            notas1 = int(input(f"Ingrese la nota {j+1}: "))
 
-for i in range(cantidad):
-    nombre = input(f"Ingrese el nombre del estudiante: {i+1} ")
-    notas = int(input("Ingrese la cantidad de notas a promediar: "))
-    for j in range(notas):
-        notas1 = int(input(f"Ingrese la nota: {j+1}"))
+            sum += notas1
+
+    prom = notas1/notas
 
 except ValueError:
     print("Error: Debes ingresar números válidos.")
@@ -22,8 +27,7 @@ except Exception as e:
     print("Se produjo un error inesperado:", e)
 
 else:
-    print(f"Resultado de la división: {resultado}")
-    print(f"Suma con texto (esto no debería ejecutarse): {suma}")
+    print(f"Resultado de la división: {prom}")
 
 finally:
     print("Fin del proceso :(")

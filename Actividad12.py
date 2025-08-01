@@ -26,5 +26,5 @@ else:
     print(f"Suma con texto (esto no debería ejecutarse): {suma}")
 
 finally:
-    print("Fin del proceso.")
+    print("Fin del proceso :(")
 
